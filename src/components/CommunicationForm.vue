@@ -58,8 +58,9 @@ export default {
       for (let i in this.tableT){
         await axios
           .post('http://localhost:8080', {
+            
             name: this.tableT[i].name,
-            description: this.tableT[i].description
+            description: this.tableT[i].desc
           })
           .then((response) => {
             console.log(response);
